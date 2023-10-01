@@ -10,6 +10,7 @@ import { FiLogIn } from "react-icons/fi";
 import Reg from '../register/reg';
 import Home from '../Home/Home';
 import Dashboard from '../Dashboard/Dashboard';
+import LoanList from '../Loanlist/LoanList';
 
 function Header() {
     return (
@@ -24,7 +25,7 @@ function Header() {
                     <ul class="menu">
                         <li><a ><Link to="home">Home</Link></a></li>
                         <li><a ><Link to="dashboard">Dashboard</Link></a></li>
-                        <li><a ><Link to="dashboard">Loan Listing</Link></a></li>
+                        <li><a ><Link to="loan">Loan Listing</Link></a></li>
                         <li><a ><Link to="dashboard">Profile Details</Link></a></li>
                         <li><Link to="reg"> <span> <FiLogIn style={{ fontSize: '20px' }} /> </span> <span> Sigin/Login </span> </Link></li>
                     </ul>
@@ -35,6 +36,7 @@ function Header() {
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="reg" element={<Reg />} />
                     <Route path="home" element={<Home />} />
+                    <Route path="loan" element={<LoanList />} />
 
                 </Routes>
             </section>
