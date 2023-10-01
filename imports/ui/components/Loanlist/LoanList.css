@@ -1,5 +1,27 @@
-.Loan-List{
+.Loan-List {
     padding: 30px;
     display: flex;
-    
+    flex-direction: column;
 }
+
+.loans {
+    /* display: flex; */
+
+    margin-top: 50px;
+    /* justify-content: space-around; */
+}
+
+/* .o {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #faf9f6;
+}
+
+.t {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */

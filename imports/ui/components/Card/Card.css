@@ -1,0 +1,10 @@
+.Card{
+    display: flex;
+    margin: 20px;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+.Card-Top{
+    display: flex;
+}

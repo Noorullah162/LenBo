@@ -23,7 +23,7 @@ function Header() {
                     <input type="checkbox" id="menu-toggle" />
                     <label for="menu-toggle" class="menu-icon">&#9776;</label>
                     <ul class="menu">
-                        <li><a ><Link to="home">Home</Link></a></li>
+                        <li><a ><Link to="/">Home</Link></a></li>
                         <li><a ><Link to="dashboard">Dashboard</Link></a></li>
                         <li><a ><Link to="loan">Loan Listing</Link></a></li>
                         <li><a ><Link to="dashboard">Profile Details</Link></a></li>
@@ -35,7 +35,7 @@ function Header() {
                 <Routes>
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="reg" element={<Reg />} />
-                    <Route path="home" element={<Home />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="loan" element={<LoanList />} />
 
                 </Routes>
