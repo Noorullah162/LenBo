@@ -26,7 +26,7 @@ function Header() {
                         <li><a ><Link to="/">Home</Link></a></li>
                         <li><a ><Link to="dashboard">Dashboard</Link></a></li>
                         <li><a ><Link to="loan">Loan Listing</Link></a></li>
-                        <li><a ><Link to="dashboard">Profile Details</Link></a></li>
+                        {/* <li><a ><Link to="dashboard">Profile Details</Link></a></li> */}
                         <li><Link to="reg"> <span> <FiLogIn style={{ fontSize: '20px' }} /> </span> <span> Sigin/Login </span> </Link></li>
                     </ul>
                 </nav>
@@ -37,7 +37,6 @@ function Header() {
                     <Route path="reg" element={<Reg />} />
                     <Route path="/" element={<Home />} />
                     <Route path="loan" element={<LoanList />} />
-
                 </Routes>
             </section>
 
