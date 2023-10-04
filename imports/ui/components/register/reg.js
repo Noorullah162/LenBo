@@ -1,44 +1,87 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './reg.css';
+
+import Datainfo from '../DataInfo/DataInfo';
+import { useNavigate} from 'react-router-dom';
 function Reg() {
+
+    const [emailValue, setemailValue] = useState('');
+    const [pwdValue, setpwdValue] = useState('');
+    const [logemailValue, setlogemailValue] = useState('');
+    const [logpwdValue, setlogpwdValue] = useState('');
+    const [selectedOption, setselectedOption] = useState("lender");
+    const [logselectedOption, logsetselectedOption] = useState("lender");
+    const navigate = useNavigate();
+    // const history = useHistory();
+    const SubmitHandler = (e) => {
+        e.preventDefault();
+        Datainfo.push({
+            Name: emailValue,
+            paswd: pwdValue,
+            option: selectedOption
+        });
+        console.log(Datainfo); 
+        setemailValue('');
+        setpwdValue('');
+        setselectedOption('');
+    }
+
+    const Checklog = (e) => {
+        e.preventDefault();
+        const obj = { Name : logemailValue, paswd: logpwdValue, option: logselectedOption}
+        // console.log(obj);
+        // console.log();
+        if (Datainfo.filter(value => (value.Name == obj.Name && value.paswd == obj.paswd && obj.option == value.option )).length  > 0){
+            console.log("True");
+            return navigate('/',  {replace: true});
+            // history('loan', from {'reg'})
+        }
+        else{
+           alert("Please Sign Up");
+        }
+
+        setlogemailValue('');
+        setlogpwdValue('');
+    }
+    
     return (
         <div>
-             <div class="container">
+             <div className="container">
                 <input type="checkbox" id="check" />
-                <div class="login form">
+                <div className="login form">
                     <header>Login</header>
-                    <form action="#">
-                        <input type="text" placeholder="Enter your email" />
-                        <input type="password" placeholder="Enter your password" />
-                        {/* <a href="#">Forgot password?</a> */}
-                        <select>
-                            <option>Lender</option>
-                            <option>Borrower</option>
+                    <form onSubmit={Checklog}>
+                        <input type="text" placeholder="Enter your email" value={logemailValue} onChange={e => setlogemailValue(e.target.value)} />
+                        <input type="password" placeholder="Enter your password" value={logpwdValue} onChange={e => setlogpwdValue(e.target.value)} />
+                        
+                        <select value={logselectedOption} onChange={e => logsetselectedOption(e.target.value)}>
+                            <option value="lender">Lender</option>
+                            <option value="borrower">Borrower</option>
                         </select>
-                        <input type="button" class="button" value="Login" />
+                        <input type="submit" className="button" value="Login" />
 
                     </form>
-                    <div class="signup">
-                        <span class="signup">Don't have an account?
-                            <label for="check">Signup</label>
+                    <div className="signup">
+                        <span className="signup">Don't have an account?
+                            <label htmlFor="check">Signup</label>
                         </span>
                     </div>
                 </div>
-                <div class="registration form">
+                <div className="registration form">
                     <header>Signup</header>
-                    <form action="#">
-                        <input type="text" placeholder="Enter your email" />
-                        <input type="password" placeholder="Create a password" />
-                        <input type="password" placeholder="Confirm your password" />
-                        <select>
-                            <option>Lender</option>
-                            <option>Borrower</option>
+                    <form onSubmit={SubmitHandler}>
+                        <input type="text" placeholder="Enter your email" value={emailValue} onChange={e => setemailValue(e.target.value)} />
+                        <input type="password" placeholder="Create a password" value={pwdValue} onChange={e => setpwdValue(e.target.value)}/>
+                        <input type="password" placeholder="Confirm your password" value={pwdValue} onChange={e => setpwdValue(e.target.value)} />
+                        <select value={selectedOption} onChange={e => setselectedOption(e.target.value)}>
+                            <option value="lender">Lender</option>
+                            <option value="borrower">Borrower</option>
                         </select>
-                        <input type="button" class="button" value="Signup" />
+                        <input type="submit" className="button" value="Signup" />
                     </form>
-                    <div class="signup">
-                        <span class="signup">Already have an account?
-                            <label for="check">Login</label>
+                    <div className="signup">
+                        <span className="signup">Already have an account?
+                            <label htmlFor="check">Login</label>
                         </span>
                     </div>
                 </div>
