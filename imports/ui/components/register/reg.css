@@ -11,10 +11,12 @@
   background: #009579;
 } */
 .container{
-  position: absolute;
-  top: 60%;
+  /* position: absolute; */
+  /* top: 60%; */
+  margin-top: 5%;
+  margin-bottom: 10%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  /* transform: translate(-50%,-50%); */
   max-width: 430px;
   width: 100%;
   background: #fff;
@@ -23,10 +25,16 @@
 }
 .container .registration{
   display: none;
+  /* margin-top: 500px; */
 }
 #check:checked ~ .registration{
   display: block;
+  /* margin-top: 500px; */
 }
+
+/* #check:checked ~ .registration .container{
+  margin-top: 30%;
+} */
 #check:checked ~ .login{
   display: none;
 }

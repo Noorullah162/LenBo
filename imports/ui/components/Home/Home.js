@@ -14,9 +14,9 @@ function Home() {
                 <div style={{ textAlign: "center" }}>
                     <img src="https://oxyloans.com/wp-content/themes/oxyloan/oxyloan/_ui/images/shape1.png" />
                 </div>
-                <div class="service-info">
-                    <div class="service-content">
-                        <div class="content-1">
+                <div className="service-info">
+                    <div className="service-content">
+                        <div className="content-1">
 
                             <p>
                                 Lenders on our platform can earn returns as high as 36% from individual tranches of investments. However we encourage them to diversify the risk by investing in multiple customers across different risk class such that risk remains low and returns are maximized, which in turn depends on the risk appetite of customers. The criteria for Lender on boarding too follows policies similar to those followed for Borrowers. It includes physical verification of location and income & expense statements.
@@ -53,7 +53,7 @@ function Home() {
 
                         </div>
 
-                        <div class="nature-img1">
+                        <div className="nature-img1">
                             <img width="70%" height="100%"
                                 src="https://miro.medium.com/v2/resize:fit:1200/1*IrsY7pM5Hne2fZdqJ7jiyg.png" />
                         </div>
@@ -101,7 +101,7 @@ function Home() {
                         </ul>
                     </div>
 
-                    <div class="nature-img1">
+                    <div className="nature-img1">
                         <img width="100%" height="60%"
                             src="https://media.istockphoto.com/id/1306417458/vector/businessman-getting-credit-from-bank-flat-vector-illustration-loan-agreement-banker-and.jpg?s=612x612&w=0&k=20&c=t6LVYS6wjZ3joDbUtn4cD0vpEK41TNMyjG6_DhWvamc=" />
                     </div>

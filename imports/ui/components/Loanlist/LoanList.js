@@ -7,11 +7,11 @@ function LoanList() {
 
     const cardItem = (item) => {
         return (
-            <div class="card my-5" key={item.id} style={{ width: "30rem", padding: "0px" }}>
+            <div className="card my-5" key={item.id} style={{ width: "30rem", padding: "0px" }}>
                 {/* <img src={item.img} class="card-img-top" alt={item.title} /> */}
-                <div class="card-body text-center" style={{padding:"0px ", margin:"0px"}}>
+                <div className="card-body text-center" style={{padding:"0px ", margin:"0px"}}>
                     <div style={{ backgroundColor: "#00a65a", color: "white", height: "100px" , paddingTop: "20px"}}>
-                        <h5 class="card-title">{item.name}</h5>
+                        <h5 className="card-title">{item.name}</h5>
                         <p className="lead">Age: {item.age}</p>
                     </div>
                     <div style={{padding: "30px"}}>
